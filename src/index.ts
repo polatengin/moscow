@@ -23,6 +23,10 @@ companies.forEach(item => {
     element.blur();
 
     item.isAdded = !item.isAdded;
+
+    refreshStockList();
+  });
+
   symbolList.appendChild(element);
 });
 
@@ -36,6 +40,7 @@ setInterval(() => {
     if (current === 0) {
       current = 99;
 
+      refreshStockList();
     }
 
     refreshProgress.style.width = `${current}%`;
