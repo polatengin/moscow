@@ -1,3 +1,5 @@
+const token: string = '';
+
 Notification.requestPermission();
 
 enum Direction {
@@ -106,7 +108,7 @@ function refreshStockList() {
         if (isGreen) {
           showNotification(company, previous, Direction.down);
         }
-    });
+      });
     });
   }
 }
