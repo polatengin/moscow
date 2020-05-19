@@ -10,5 +10,10 @@
     "workbench.iconTheme": "vscode-icons"
   },
   "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-vsliveshare.vsliveshare",
+    "vscode-icons-team.vscode-icons",
+    "editorconfig.editorconfig",
+    "davidanson.vscode-markdownlint"
   ]
 }
