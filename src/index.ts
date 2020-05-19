@@ -1,5 +1,10 @@
 Notification.requestPermission();
 
+enum Direction {
+  'up',
+  'down'
+}
+
 const companies = [
   { name: 'Microsoft', symbol: 'MSFT', isAdded: false, data: undefined },
   { name: 'Apple', symbol: 'AAPL', isAdded: false, data: undefined },
