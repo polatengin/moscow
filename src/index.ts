@@ -50,6 +50,7 @@ document.addEventListener('keydown', (e) => {
 
 const stockList = document.getElementById('stock-list');
 function refreshStockList() {
+  stockList.innerHTML = '';
 }
 
 function showNotification(company, previous, direction: Direction) {
