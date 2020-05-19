@@ -93,6 +93,14 @@ function refreshStockList() {
         item.appendChild(_daily);
 
         stockList.appendChild(item);
+
+        if (isRed) {
+          showNotification(company, previous, Direction.up);
+        }
+
+        if (isGreen) {
+          showNotification(company, previous, Direction.down);
+        }
     });
     });
   }
