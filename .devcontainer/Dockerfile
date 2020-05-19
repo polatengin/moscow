@@ -24,3 +24,6 @@ RUN apt-get update \
     # Install ngrok
     && curl --silent https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip --output /usr/local/bin/ngrok.zip \
     && unzip /usr/local/bin/ngrok.zip -d /usr/local/bin/ \
+    #
+    # Install global tools
+    && npm i -g npm-check-updates \
