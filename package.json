@@ -4,6 +4,11 @@
   "description": "Sample project to explain Notifications API w/ Typescript",
   "main": "index.js",
   "homepage": "https://github.com/polatengin/moscow",
+  "scripts": {
+    "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
+    "build": "webpack --mode production && postcss src/index.css > dist/bundle.css",
+    "start": "npm run build:dev && serve ./dist/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/polatengin/moscow"
