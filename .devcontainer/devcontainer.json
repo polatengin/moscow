@@ -1,3 +1,4 @@
 {
   "name": "Moscow Development Environment",
+  "dockerFile": "Dockerfile",
 }
