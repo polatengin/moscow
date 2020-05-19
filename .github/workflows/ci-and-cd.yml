@@ -1,2 +1,5 @@
 name: BuildAndPublish
 on: push
+jobs:
+  BuildAndPublish:
+    name: BuildAndPublish
