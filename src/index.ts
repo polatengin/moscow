@@ -107,5 +107,21 @@ function refreshStockList() {
 }
 
 function showNotification(company, previous, direction: Direction) {
+  const options = {
+    vibrate: [500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170, 40, 500],
+    icon: '/favicon.png',
+    body: `${company.name} (${company.symbol}) is going ${Direction[direction]}. It was ${previous.c}$ now it's ${company.data.c}$`,
+    badge: `./${direction === Direction.up ? 'buy' : 'sell'}.png`,
+    image: `./${direction === Direction.up ? 'buy' : 'sell'}.png`,
+    tag: company.symbol
+  };
+  const notification = new Notification(company.name, options);
+
+  setTimeout(notification.close.bind(notification), 8000);
+
+  notification.addEventListener('click', (event) => {
+    const symbol = (event.target as Notification).tag;
+    const element = stockList.getElementsByClassName(`symbol-${symbol}`)[0];
+    element.classList.add('selected');
   });
 }
