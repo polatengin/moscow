@@ -59,6 +59,41 @@ function refreshStockList() {
   for (const company of companies.filter(e => e.isAdded)) {
     fetch(`https://finnhub.io/api/v1/quote?symbol=${company.symbol}&token=${token}`).then(_ => {
       _.json().then(body => {
+        const previous = company.data;
+
+        const isRed = company.data && company.data.c > body.c;
+        const isGreen = company.data && company.data.c < body.c;
+
+        company.data = body;
+
+        const item = document.createElement('div');
+        item.className = `list-group-item list-group-item-action symbol-${company.symbol} list-group-item${ isRed ? '-danger' : '' }${ isGreen ? '-success' : '' }`;
+
+        const div = document.createElement('div');
+        div.className = 'd-flex w-100 justify-content-between';
+
+        const _name = document.createElement('h5');
+        _name.innerText = company.name;
+
+        const _symbol = document.createElement('small');
+        _symbol.innerText = company.symbol;
+
+        const _current = document.createElement('p');
+        _current.className = 'mb-1';
+        _current.innerText = `${company.data.c}$`;
+
+        const _daily = document.createElement('small');
+        _daily.innerText = `Daily Lowest: ${company.data.l}$ , Daily Highest: ${company.data.h}$`;
+
+        div.appendChild(_name);
+        div.appendChild(_symbol);
+
+        item.appendChild(div);
+        item.appendChild(_current);
+        item.appendChild(_daily);
+
+        stockList.appendChild(item);
+    });
     });
   }
 }
