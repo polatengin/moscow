@@ -27,3 +27,6 @@ RUN apt-get update \
     #
     # Install global tools
     && npm i -g npm-check-updates \
+    #
+    # [Optional] Add sudo support for the non-root user
+    && apt-get install -y sudo \
