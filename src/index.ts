@@ -12,6 +12,7 @@ const companies = [
   { name: 'Tesla', symbol: 'TSLA', isAdded: false, data: undefined }
 ];
 
+const symbolList = document.getElementById('symbol-list');
 companies.forEach(item => {
   const element = document.createElement('button');
   element.className = 'list-group-item list-group-item-action';
