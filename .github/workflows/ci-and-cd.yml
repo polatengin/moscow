@@ -14,3 +14,9 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: polatengin/moscow
         tags: latest
+    - name: Docker Hub Description
+      uses: peter-evans/dockerhub-description@v2
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        DOCKERHUB_REPOSITORY: polatengin/moscow
