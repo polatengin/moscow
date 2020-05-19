@@ -19,4 +19,19 @@
   ],
   "author": "Engin Polat",
   "license": "MIT",
+  "devDependencies": {
+    "@types/node": "13.13.4",
+    "@types/webpack": "4.41.12",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.1.1",
+    "cssnano": "4.1.10",
+    "html-minifier-webpack-plugin": "2.2.3",
+    "html-webpack-plugin": "4.3.0",
+    "postcss-cli": "7.1.1",
+    "serve": "11.3.0",
+    "ts-loader": "7.0.2",
+    "typescript": "3.8.3",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11"
+  }
 }
