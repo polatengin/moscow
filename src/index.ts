@@ -57,6 +57,9 @@ const stockList = document.getElementById('stock-list');
 function refreshStockList() {
   stockList.innerHTML = '';
   for (const company of companies.filter(e => e.isAdded)) {
+    fetch(`https://finnhub.io/api/v1/quote?symbol=${company.symbol}&token=${token}`).then(_ => {
+      _.json().then(body => {
+    });
   }
 }
 
