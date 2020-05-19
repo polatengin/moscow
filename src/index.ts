@@ -22,5 +22,9 @@ companies.forEach(item => {
     element.classList.toggle('active');
     element.blur();
 
+    item.isAdded = !item.isAdded;
+  symbolList.appendChild(element);
+});
+
 });
   });
