@@ -47,5 +47,11 @@ document.addEventListener('keydown', (e) => {
     _isPaused = !_isPaused;
   }
 });
+
 const stockList = document.getElementById('stock-list');
+function refreshStockList() {
+}
+
+function showNotification(company, previous, direction: Direction) {
   });
+}
