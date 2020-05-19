@@ -18,3 +18,7 @@ USER root
 
 COPY --from=builder /code/dist /usr/share/nginx/html
 
+RUN nginx
+
+EXPOSE 80
+
