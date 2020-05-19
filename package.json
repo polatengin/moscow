@@ -1,4 +1,5 @@
 {
   "name": "moscow",
   "version": "1.0.0",
+  "description": "Sample project to explain Notifications API w/ Typescript",
 }
