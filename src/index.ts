@@ -27,15 +27,25 @@ companies.forEach(item => {
 });
 
 const refreshProgress = document.getElementById('refresh-progress');
+
+let _isPaused = false;
 setInterval(() => {
+  if (!_isPaused && companies.filter(e => e.isAdded).length > 0) {
     let current = parseInt(refreshProgress.style.width.replace('%', ''), 10) - 1;
+
     if (current === 0) {
       current = 99;
 
     }
 
     refreshProgress.style.width = `${current}%`;
+  }
 }, 100);
+
+document.addEventListener('keydown', (e) => {
+  if (e.keyCode === 32) {
+    _isPaused = !_isPaused;
+  }
 });
 const stockList = document.getElementById('stock-list');
   });
