@@ -4,3 +4,5 @@ jobs:
   BuildAndPublish:
     name: BuildAndPublish
     runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
