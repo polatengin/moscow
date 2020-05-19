@@ -22,3 +22,9 @@ RUN nginx
 
 EXPOSE 80
 
+LABEL maintainer="Engin Polat (polatengin) <engin@enginpolat.com>" \
+      org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.license="MIT" \
+      org.label-schema.name="Display notification on a webpage using Typescript" \
+      org.label-schema.vcs-type="Git" \
+      org.label-schema.vcs-url="https://github.com/polatengin/moscow"
