@@ -2,4 +2,16 @@
   "name": "moscow",
   "version": "1.0.0",
   "description": "Sample project to explain Notifications API w/ Typescript",
+  "main": "index.js",
+  "homepage": "https://github.com/polatengin/moscow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polatengin/moscow"
+  },
+  "keywords": [
+    "notifications",
+    "requestpermission"
+  ],
+  "author": "Engin Polat",
+  "license": "MIT",
 }
