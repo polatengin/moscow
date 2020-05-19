@@ -27,6 +27,15 @@ companies.forEach(item => {
 });
 
 const refreshProgress = document.getElementById('refresh-progress');
+setInterval(() => {
+    let current = parseInt(refreshProgress.style.width.replace('%', ''), 10) - 1;
+    if (current === 0) {
+      current = 99;
+
+    }
+
+    refreshProgress.style.width = `${current}%`;
+}, 100);
 });
 const stockList = document.getElementById('stock-list');
   });
