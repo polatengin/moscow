@@ -26,5 +26,6 @@ companies.forEach(item => {
   symbolList.appendChild(element);
 });
 
+const refreshProgress = document.getElementById('refresh-progress');
 });
   });
