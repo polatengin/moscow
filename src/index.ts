@@ -56,6 +56,8 @@ document.addEventListener('keydown', (e) => {
 const stockList = document.getElementById('stock-list');
 function refreshStockList() {
   stockList.innerHTML = '';
+  for (const company of companies.filter(e => e.isAdded)) {
+  }
 }
 
 function showNotification(company, previous, direction: Direction) {
