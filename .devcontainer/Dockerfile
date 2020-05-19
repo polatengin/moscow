@@ -20,3 +20,7 @@ RUN apt-get update \
     # Install Docker Compose
     && curl -sSL "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose \
+    #
+    # Install ngrok
+    && curl --silent https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip --output /usr/local/bin/ngrok.zip \
+    && unzip /usr/local/bin/ngrok.zip -d /usr/local/bin/ \
