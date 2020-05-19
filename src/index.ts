@@ -28,4 +28,5 @@ companies.forEach(item => {
 
 const refreshProgress = document.getElementById('refresh-progress');
 });
+const stockList = document.getElementById('stock-list');
   });
